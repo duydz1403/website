@@ -2,69 +2,73 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Website cá nhân</title>
+    <title>Portfolio cá nhân</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- MENU -->
-<nav>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">MyPortfolio</div>
     <ul>
         <li><a href="#home">Trang chủ</a></li>
         <li><a href="#about">Giới thiệu</a></li>
-        <li><a href="#skills">Kỹ năng</a></li>
+        <li><a href="#projects">Dự án</a></li>
         <li><a href="#contact">Liên hệ</a></li>
     </ul>
 </nav>
 
-<!-- HOME -->
-<header id="home" class="hero">
-    <div class="hero-content">
-        <img src="avatar.jpg" class="avatar">
-        <h1>Xin chào 👋</h1>
-        <p>Mình đang học lập trình Web</p>
-        <button onclick="sayHello()">Bắt đầu</button>
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="hero-text">
+        <h1>Xin chào, mình là <span>Web Developer</span></h1>
+        <p>Mình xây dựng website hiện đại, đẹp và tối ưu</p>
+        <a href="#projects" class="btn">Xem dự án</a>
     </div>
-</header>
+</section>
 
 <!-- ABOUT -->
-<section id="about">
-    <h2>🚀 Giới thiệu</h2>
-    <p>
-        Mình là người mới học lập trình Web.  
-        Website này được tạo bằng <strong>HTML, CSS, JavaScript</strong>.
-    </p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-    <h2>💡 Kỹ năng</h2>
-    <div class="skills">
-        <div>HTML</div>
-        <div>CSS</div>
-        <div>JavaScript</div>
-        <div>GitHub</div>
+<section id="about" class="about">
+    <div class="about-img">
+        <img src="images/about.jpg">
+    </div>
+    <div class="about-text">
+        <h2>Giới thiệu</h2>
+        <p>
+            Mình đang học và phát triển kỹ năng lập trình Web với HTML, CSS, JavaScript.
+            Mục tiêu là trở thành Frontend Developer chuyên nghiệp.
+        </p>
     </div>
 </section>
 
-<!-- MESSAGE -->
-<section class="message">
-    <p id="message"></p>
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+    <h2>Dự án</h2>
+    <div class="project-list">
+        <div class="project-card">
+            <img src="images/project1.jpg">
+            <h3>Website cá nhân</h3>
+            <p>Trang portfolio giới thiệu bản thân</p>
+        </div>
+
+        <div class="project-card">
+            <img src="images/project2.jpg">
+            <h3>Landing Page</h3>
+            <p>Trang giới thiệu sản phẩm</p>
+        </div>
+    </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-    <h2>📞 Liên hệ</h2>
-    <div class="contact-links">
-        <a href="https://www.facebook.com/nhat.duy.172263" target="_blank">Facebook</a>
-        <a href="https://zalo.me/0392983154" target="_blank">Zalo</a>
-        <a href="mailto:duydz1403@gmail.com">Email</a>
-    </div>
+<section id="contact" class="contact">
+    <h2>Liên hệ</h2>
+    <p>Email: example@gmail.com</p>
+    <p>Facebook | Zalo</p>
 </section>
 
 <footer>
-    <p>© 2026 | Website cá nhân</p>
+    © 2026 - Portfolio cá nhân
 </footer>
 
 <script src="script.js"></script>
