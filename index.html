@@ -73,6 +73,34 @@
 </section>
 
 <footer>
+    <!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog chia sẻ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>📝 Blog chia sẻ công khai</h1>
+
+  <div class="post-box">
+    <input id="title" placeholder="Tiêu đề bài viết">
+    <textarea id="content" placeholder="Nội dung bài viết"></textarea>
+    <button onclick="addPost()">Đăng bài</button>
+  </div>
+
+  <h2>Bài viết mới nhất</h2>
+  <div id="posts"></div>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
     © 2026 | Portfolio cá nhân
 </footer>
 
