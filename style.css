@@ -145,8 +145,7 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
-}
-body.dark {
+}body.dark {
     background: #121212;
     color: #eee;
 }
@@ -168,3 +167,4 @@ body.dark section {
     border: none;
     cursor: pointer;
 }
+
