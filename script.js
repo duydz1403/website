@@ -14,12 +14,16 @@ window.addEventListener("scroll", () => {
         }
     });
 });
-// 🔥 Firebase config (DÁN CỦA BẠN VÀO ĐÂY)
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
+  apiKey: "AIzaSyBqPs-bJ6rG1F-hmFQY5sXERDe6xm_mnBg",
+  authDomain: "website-9e9c1.firebaseapp.com",
+  projectId: "website-9e9c1",
+  storageBucket: "website-9e9c1.firebasestorage.app",
+  messagingSenderId: "365849339720",
+  appId: "1:365849339720:web:adfbce6b9632177c06b57d",
+  measurementId: "G-J4816DN8TX"
 };
+
 
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
@@ -76,16 +80,31 @@ db.collection("posts")
       `;
     });
   });
-  function addComment(e, postId) {
-  if (e.key === "Enter" && e.target.value.trim()) {
-    db.collection("posts").doc(postId)
-      .collection("comments")
-      .add({
-        text: e.target.value,
-        time: firebase.firestore.FieldValue.serverTimestamp()
+ function addComment(postId) {
+  const input = document.getElementById(`comment-${postId}`);
+  const text = input.value.trim();
+  if (!text) return;
+
+  db.collection("comments").add({
+    postId: postId,
+    text: text,
+    time: firebase.firestore.FieldValue.serverTimestamp()
+  });
+
+  input.value = "";
+}
+function loadComments(postId) {
+  const box = document.getElementById(`comments-${postId}`);
+
+  db.collection("comments")
+    .where("postId", "==", postId)
+    .orderBy("time")
+    .onSnapshot(snapshot => {
+      box.innerHTML = "";
+      snapshot.forEach(doc => {
+        box.innerHTML += `<p>💬 ${doc.data().text}</p>`;
       });
-    e.target.value = "";
-  }
+    });
 }
 db.collection("posts").doc(doc.id)
   .collection("comments")
