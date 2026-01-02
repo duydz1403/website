@@ -182,4 +182,43 @@ button {
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 6px;
+}body {
+  background: linear-gradient(120deg,#667eea,#764ba2);
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
 }
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+.post-box, .post {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 700px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+}
+
+.post img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+button {
+  background: #ff4081;
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+

@@ -76,3 +76,25 @@ db.collection("posts")
       `;
     });
   });
+  function addComment(e, postId) {
+  if (e.key === "Enter" && e.target.value.trim()) {
+    db.collection("posts").doc(postId)
+      .collection("comments")
+      .add({
+        text: e.target.value,
+        time: firebase.firestore.FieldValue.serverTimestamp()
+      });
+    e.target.value = "";
+  }
+}
+db.collection("posts").doc(doc.id)
+  .collection("comments")
+  .orderBy("time")
+  .onSnapshot(cmt => {
+    const box = document.getElementById("comments-" + doc.id);
+    box.innerHTML = "";
+    cmt.forEach(c => {
+      box.innerHTML += `<p>💬 ${c.data().text}</p>`;
+    });
+  });
+
