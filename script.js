@@ -117,9 +117,16 @@ db.collection("posts").doc(doc.id)
     });
   });
 function toggleMenu() {
-  document.getElementById("mainMenu").classList.toggle("show");
+  const menu = document.getElementById("mainMenu");
+  menu.classList.toggle("show");
 }
-function toggleDark() {
-  document.body.classList.toggle("dark");
-}
+
+// tự đóng menu khi bấm link
+document.querySelectorAll(".menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("mainMenu").classList.remove("show");
+  });
+});
+
+
 
