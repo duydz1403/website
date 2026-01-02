@@ -1,14 +1,16 @@
-function sayHello() {
-    document.getElementById("message").innerText =
-        "🎉 Chào mừng bạn đến với website cá nhân của mình!";
-}
-const sections = document.querySelectorAll("section");
+// Dark mode
+document.getElementById("darkToggle").onclick = () => {
+    document.body.classList.toggle("dark");
+};
+
+// Scroll animation
+const reveals = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", () => {
-    sections.forEach(sec => {
-        const top = sec.getBoundingClientRect().top;
+    reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
         if (top < window.innerHeight - 100) {
-            sec.classList.add("show");
+            el.classList.add("show");
         }
     });
 });

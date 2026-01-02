@@ -8,6 +8,9 @@
 </head>
 <body>
 
+<!-- DARK MODE -->
+<button id="darkToggle">🌙</button>
+
 <!-- NAVBAR -->
 <nav class="navbar">
     <div class="logo">MyPortfolio</div>
@@ -20,36 +23,34 @@
 </nav>
 
 <!-- HERO -->
-<section id="home" class="hero">
+<section id="home" class="hero reveal">
     <div class="hero-text">
         <h1>Xin chào, mình là <span>Web Developer</span></h1>
-        <p>Mình xây dựng website hiện đại, đẹp và tối ưu</p>
+        <p>Xây dựng website hiện đại – đẹp – chuẩn responsive</p>
         <a href="#projects" class="btn">Xem dự án</a>
     </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="about">
-    <div class="about-img">
-        <img src="images/about.jpg">
-    </div>
-    <div class="about-text">
+<section id="about" class="about reveal">
+    <img src="images/about.jpg">
+    <div>
         <h2>Giới thiệu</h2>
         <p>
-            Mình đang học và phát triển kỹ năng lập trình Web với HTML, CSS, JavaScript.
-            Mục tiêu là trở thành Frontend Developer chuyên nghiệp.
+            Mình đang học và phát triển Frontend với HTML, CSS, JavaScript.
+            Mục tiêu trở thành lập trình viên chuyên nghiệp.
         </p>
     </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="projects">
+<section id="projects" class="projects reveal">
     <h2>Dự án</h2>
     <div class="project-list">
         <div class="project-card">
             <img src="images/project1.jpg">
             <h3>Website cá nhân</h3>
-            <p>Trang portfolio giới thiệu bản thân</p>
+            <p>Portfolio giới thiệu bản thân</p>
         </div>
 
         <div class="project-card">
@@ -61,14 +62,18 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
+<section id="contact" class="contact reveal">
     <h2>Liên hệ</h2>
-    <p>Email: example@gmail.com</p>
-    <p>Facebook | Zalo</p>
+    <div class="contact-links">
+        <a href="https://facebook.com/" target="_blank">Facebook</a>
+        <a href="https://zalo.me/" target="_blank">Zalo</a>
+        <a href="https://github.com/" target="_blank">GitHub</a>
+        <a href="mailto:example@gmail.com">Email</a>
+    </div>
 </section>
 
 <footer>
-    © 2026 - Portfolio cá nhân
+    © 2026 | Portfolio cá nhân
 </footer>
 
 <script src="script.js"></script>
