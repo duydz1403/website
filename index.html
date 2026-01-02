@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Portfolio cá nhân</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
+<link rel="manifest" href="manifest.json">
+
 <body>
 
 <!-- DARK MODE -->
@@ -13,13 +16,23 @@
 
 <!-- NAVBAR -->
 <nav class="navbar">
-    <div class="logo">MyPortfolio</div>
-    <ul>
-        <li><a href="#home">Trang chủ</a></li>
-        <li><a href="#about">Giới thiệu</a></li>
-        <li><a href="#projects">Dự án</a></li>
-        <li><a href="#contact">Liên hệ</a></li>
-    </ul>
+    <header <header class="top-header">
+  <div class="header-row">
+    <h1 class="site-title">📝 BLOG CHIA SẺ</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <nav class="menu" id="mainMenu">
+    <a href="#">🏠 Trang chủ</a>
+    <a href="#posts">📚 Bài viết</a>
+    <a href="#contact">📞 Liên hệ</a>
+    <button onclick="toggleDark()">🌙 Dark mode</button>
+  </nav>
+</header>
+
+  </nav>
+</header>
+
 </nav>
 
 <!-- HERO -->
@@ -93,7 +106,8 @@
   </div>
 
   <h2>Bài viết mới nhất</h2>
-  <div id="posts"></div>
+  <div id="posts" class="posts-section"></div>
+
   
 
   <!-- Firebase -->

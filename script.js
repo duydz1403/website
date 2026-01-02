@@ -97,4 +97,10 @@ db.collection("posts").doc(doc.id)
       box.innerHTML += `<p>💬 ${c.data().text}</p>`;
     });
   });
+function toggleMenu() {
+  document.getElementById("mainMenu").classList.toggle("show");
+}
+function toggleDark() {
+  document.body.classList.toggle("dark");
+}
 
