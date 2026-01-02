@@ -146,3 +146,25 @@ footer {
         transform: translateY(0);
     }
 }
+body.dark {
+    background: #121212;
+    color: #eee;
+}
+
+body.dark nav {
+    background: #000;
+}
+
+body.dark section {
+    background: #121212;
+}
+
+#darkToggle {
+    position: fixed;
+    right: 20px;
+    top: 15px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
