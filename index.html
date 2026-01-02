@@ -2,20 +2,71 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Trang web đầu tiên</title>
+    <title>Website cá nhân</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Xin chào!</h1>
-        <p> 🚀</p>
-    </header>
 
-    <main>
-        <button onclick="sayHello()">Bấm vào tôi</button>
-        <p id="message"></p>
-    </main>
+<!-- MENU -->
+<nav>
+    <ul>
+        <li><a href="#home">Trang chủ</a></li>
+        <li><a href="#about">Giới thiệu</a></li>
+        <li><a href="#skills">Kỹ năng</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+    </ul>
+</nav>
 
-    <script src="script.js"></script>
+<!-- HOME -->
+<header id="home" class="hero">
+    <div class="hero-content">
+        <img src="avatar.jpg" class="avatar">
+        <h1>Xin chào 👋</h1>
+        <p>Mình đang học lập trình Web</p>
+        <button onclick="sayHello()">Bắt đầu</button>
+    </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>🚀 Giới thiệu</h2>
+    <p>
+        Mình là người mới học lập trình Web.  
+        Website này được tạo bằng <strong>HTML, CSS, JavaScript</strong>.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>💡 Kỹ năng</h2>
+    <div class="skills">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>JavaScript</div>
+        <div>GitHub</div>
+    </div>
+</section>
+
+<!-- MESSAGE -->
+<section class="message">
+    <p id="message"></p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>📞 Liên hệ</h2>
+    <div class="contact-links">
+        <a href="https://facebook.com/" target="_blank">Facebook</a>
+        <a href="https://zalo.me/" target="_blank">Zalo</a>
+        <a href="mailto:example@gmail.com">Email</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 | Website cá nhân</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

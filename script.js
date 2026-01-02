@@ -1,4 +1,4 @@
 function sayHello() {
     document.getElementById("message").innerText =
-        "Bạn đã bấm nút! Chúc bạn học web vui vẻ 😄";
+        "🎉 Chào mừng bạn đến với website cá nhân của mình!";
 }
