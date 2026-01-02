@@ -16,14 +16,11 @@ window.addEventListener("scroll", () => {
 });
 // 🔥 Firebase config (DÁN CỦA BẠN VÀO ĐÂY)
 const firebaseConfig = {
-  apiKey: "AIzaSyBqPs-bJ6rG1F-hmFQY5sXERDe6xm_mnBg",
-  authDomain: "website-9e9c1.firebaseapp.com",
-  projectId: "website-9e9c1",
-  storageBucket: "website-9e9c1.firebasestorage.app",
-  messagingSenderId: "365849339720",
-  appId: "1:365849339720:web:adfbce6b9632177c06b57d",
-  measurementId: "G-J4816DN8TX"
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
 };
+
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
@@ -36,6 +33,21 @@ function addPost() {
     alert("Nhập đủ nội dung");
     return;
   }
+  function savePost(title, content, imageUrl) {
+  db.collection("posts").add({
+    title: title,
+    content: content,
+    imageUrl: imageUrl,
+    likes: 0,
+    createdAt: firebase.firestore.FieldValue.serverTimestamp()
+  });
+
+  // Xóa ô nhập sau khi đăng
+  document.getElementById("title").value = "";
+  document.getElementById("content").value = "";
+  document.getElementById("image").value = "";
+}
+
 
   db.collection("posts").add({
     title: title,
